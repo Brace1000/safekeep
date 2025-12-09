@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build": "react-scripts build"
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "vite preview --port 3000 --host"  // Add this line
   },
   "dependencies": {
     "@keepsafe/shared": "file:../shared",
