@@ -8,10 +8,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "vite preview --port 3000 --host"  // Add this line
+    "start": "vite preview --port 3000 --host"
   },
   "dependencies": {
-    "@keepsafe/shared": "file:../shared",
     "lucide-react": "^0.545.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
