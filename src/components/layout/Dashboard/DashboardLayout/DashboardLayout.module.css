@@ -1,0 +1,228 @@
+/* src/components/dashboard/DashboardLayout/DashboardLayout.module.css */
+
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.sidebar {
+  width: 320px;
+  background-color: var(--bg-secondary);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid var(--border-color);
+  box-shadow: 2px 0 5px var(--shadow-color);
+  flex-shrink: 0;
+  border-radius: 10px;
+  margin: 10px;
+  height: calc(100vh - 20px);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dashboardHeaderText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeToggle:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeToggle:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.userProfile {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 15px;
+}
+
+.profilePic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #007bff; /* Accent border */
+}
+
+.username {
+  font-weight: bold;
+  font-size: 1.15em;
+  color: var(--text-primary);
+}
+
+.userEmail {
+  font-size: 0.9em;
+  color: var(--text-secondary);
+}
+
+.mainNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.navItemWrapper {
+  width: 100%;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 25px;
+  margin: 0 15px 8px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  font-size: 1em;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.navItem .icon {
+  font-size: 1.2em; /* Adjust icon size */
+}
+
+.navItem:hover {
+  background-color: #e3f2fd; /* Light blue background for appealing hover */
+  color: #1976d2; /* Darker blue text for contrast */
+  transform: translateY(-1px); /* Subtle lift effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.navItem.active {
+  background-color: #e3f2fd; /* Light blue background for active item */
+  color: #1976d2; /* Darker blue text for contrast */
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.sosButton {
+  background-color:#007bff; /* Red color for SOS */
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: auto; /* Pushes it to the bottom-ish */
+  margin-bottom: 30px;
+  width: calc(100% - 30px); /* Adjust width to match nav items */
+  text-align: center;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  
+}
+
+.sosButton:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.bottomNav {
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottomNav .navItem {
+  margin-bottom: 8px;
+}
+
+.logoutItem {
+  color: #dc3545; /* Make logout stand out */
+}
+.logoutItem:hover {
+  background-color: #ffebee; /* Light red background for appealing hover */
+  color: #d32f2f; /* Darker red text for contrast */
+  transform: translateY(-1px); /* Subtle lift effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 30px; /* Overall padding for the main content area */
+  display: flex; /* Allow content to manage its own layout */
+  flex-direction: column; /* Default vertical arrangement */
+  overflow-y: auto; /* Enable scrolling for content if it overflows */
+}
+
+/* Media query for smaller screens on sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px; /* Collapse sidebar */
+    padding: 15px 0;
+  }
+  .dashboardHeaderText, .userProfile p {
+    display: none; /* Hide text */
+  }
+  .profilePic {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+  .navItem {
+    justify-content: center; /* Center icons */
+    padding: 10px 0;
+    margin: 0 5px 8px 5px;
+  }
+  .navItem span:not(.icon) { /* Hide text label, keep icon */
+    display: none;
+  }
+  .sosButton {
+    font-size: 0.8em;
+    padding: 10px 5px;
+    width: 70px; /* Smaller SOS button */
+  }
+}

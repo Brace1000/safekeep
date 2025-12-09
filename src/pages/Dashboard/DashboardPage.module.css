@@ -1,0 +1,11 @@
+/* src/pages/Dashboard/DashboardPage.module.css */
+
+.dashboardPageContent {
+  width: 150%;
+  height: 150%; 
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+}
+
+
